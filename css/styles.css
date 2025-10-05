@@ -4,32 +4,79 @@ body {
   background-color: #ffffff;
   color: #434455;
 }
-a {
-  text-decoration: none;
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
+/* Reset start */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
 ul,
 ol {
-  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-
+a {
+  text-decoration: none;
+  color: currentColor;
+}
 button {
   font-family: inherit;
   cursor: pointer;
 }
-
 address {
   font-style: normal;
 }
+img {
+  display: block;
+}
+/* Reset end */
+
 /* #endregion Base */
 
 /* #region Header */
+.page-header {
+  border-bottom: 1px solid #e7e9fc;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.menu {
+  display: flex;
+  align-items: center;
+}
+.menu-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.address {
+  margin-left: auto;
+}
+.address-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 .menu-item-ref {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding: 24px 0;
 }
 .menu-item-ref:hover,
 .menu-item-ref:focus {
@@ -49,7 +96,10 @@ address {
   text-transform: uppercase;
   color: #4d5ae5;
 }
-
+.header-logo {
+  padding: 24px 0;
+  margin-right: 76px;
+}
 .logo-header-text {
   color: #2e2f42;
 }
@@ -59,6 +109,7 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  padding: 24px 0;
 }
 .menu-address:hover,
 .menu-address:focus {
@@ -71,6 +122,13 @@ address {
 .main {
   background-color: #2e2f42;
 }
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding: 188px 0;
+}
 .main-header {
   font-weight: 700;
   font-size: 56px;
@@ -78,6 +136,7 @@ address {
   letter-spacing: 0.02em;
   text-align: center;
   color: #ffffff;
+  max-width: 496px;
 }
 .main-button {
   font-weight: 500;
@@ -96,7 +155,34 @@ address {
 /* #endregion Main section */
 
 /* #region Our strength section */
+/* .strength-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  flex-basis: calc((100% - 24px * 3) / 4);
+} */
 .strength {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.strength-group {
+  display: inline-block;
+  width: calc((100% - (24px * 3)) / 4);
+  margin-right: 24px;
+}
+
+.strength-group:nth-child(4n) {
+  margin-right: 0;
 }
 
 .strength-category {
@@ -105,6 +191,7 @@ address {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 4px;
 }
 .strength-item {
   font-size: 16px;
@@ -125,15 +212,21 @@ address {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
+  margin-bottom: 72px;
 }
-/* .team-member {
-} */
+.team-list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-basis: calc((100% - 24px * 3) / 4);
+}
 .card-name {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 .card-text {
   font-size: 16px;
@@ -143,6 +236,10 @@ address {
 }
 .team-member {
   background-color: #ffffff;
+  border-radius: 0 0 4px 4px;
+
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 .team-member-name,
 .team-member-role {
@@ -151,19 +248,44 @@ address {
 
 .team-member-img {
 }
+
 .portfolio-item {
   background-color: #ffffff;
+}
+
+.section {
+  padding: 120px 0;
+}
+.portfolio-list {
+  display: flex;
+  align-items: center;
+  gap: 48px 24px;
+  flex-basis: calc((100% - 24px * 3) / 4);
+  flex-wrap: wrap;
+}
+.team-member-details {
+  padding: 32px;
+}
+
+.portfolio-card-text {
+  padding: 32px 0 32px 16px;
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
 }
 /* #endregion Team & Portfolio section */
 
 .footer {
   background-color: #2e2f42;
+  padding: 100px 0;
 }
 .footer-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  width: 264px;
+  margin-top: 16px;
 }
 .logo-footer-text {
   color: #f4f4fd;
