@@ -146,6 +146,11 @@ img {
   color: #ffffff;
   background: #4d5ae5;
   cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  height: 56px;
+  min-width: 169px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 .main-button:hover,
 .main-button:focus {
@@ -155,13 +160,11 @@ img {
 /* #endregion Main section */
 
 /* #region Our strength section */
-/* .strength-list {
+.strength-list {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   gap: 24px;
-  flex-basis: calc((100% - 24px * 3) / 4);
-} */
+}
 .strength {
   position: absolute;
   width: 1px;
@@ -176,13 +179,7 @@ img {
 }
 
 .strength-group {
-  display: inline-block;
   width: calc((100% - (24px * 3)) / 4);
-  margin-right: 24px;
-}
-
-.strength-group:nth-child(4n) {
-  margin-right: 0;
 }
 
 .strength-category {
@@ -191,7 +188,7 @@ img {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 .strength-item {
   font-size: 16px;
@@ -219,6 +216,7 @@ img {
   align-items: center;
   gap: 24px;
   flex-basis: calc((100% - 24px * 3) / 4);
+  flex-wrap: wrap;
 }
 .card-name {
   font-weight: 500;
@@ -264,11 +262,11 @@ img {
   flex-wrap: wrap;
 }
 .team-member-details {
-  padding: 32px;
+  padding: 32px 0;
 }
 
 .portfolio-card-text {
-  padding: 32px 0 32px 16px;
+  padding: 32px 16px;
   border-bottom: 1px solid #e7e9fc;
   border-left: 1px solid #e7e9fc;
   border-right: 1px solid #e7e9fc;
@@ -279,13 +277,17 @@ img {
   background-color: #2e2f42;
   padding: 100px 0;
 }
+
+.logo-footer {
+  margin-bottom: 16px;
+  display: inline-block;
+}
 .footer-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
   width: 264px;
-  margin-top: 16px;
 }
 .logo-footer-text {
   color: #f4f4fd;
